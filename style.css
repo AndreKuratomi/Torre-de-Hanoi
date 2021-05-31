@@ -1,4 +1,4 @@
-html, body, div, article, h1 {
+html, body, article, section, div, h1 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body#game {
-    background-color: #555;
+    background-color: #DDD;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@ h1 {
 }
 
 #suspenso {
-    background-color: #F00;
+    /* background-color: #F00; */
     margin: 0;
     width: 60vw;
     height: 10vh;
@@ -33,7 +33,7 @@ h1 {
 article {
     display: flex;
     justify-content: space-between;
-    background-color: #0F0;
+    background-color: #FFF;
     width: 60vw;
     height: 60vh;
 }
@@ -41,16 +41,67 @@ article {
 #torre1,
 #torre2,
 #torre3 {
-    border: 1px solid #000;
-    width: 33%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 34%;
     height: 100%;
 }
+.towers {
+    background-color: #555;
+    border: 1px solid #000;
+    width: 5%;
+    height: 90%;
+}
+.towers:hover {
+    cursor: pointer;
+}
+.discs {
+    background-color: #555;
+    border: 1px solid #000;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    height: 5%;
+}
+.discs:hover {
+    cursor: pointer;
+}
+#disc4 {
+    background-color: #F0F;
+    width: 90%;
+}
+#disc3 {
+    background-color: #FF0;
+    width: 70%;
+}
+#disc2 {
+    background-color: #00F;
+    width: 50%;
+}
+#disc1 {
+    background-color: #0F0;
+    width: 30%;
+}
+
 
 #notas {
-    background-color: #00F;
+    /* background-color: #00F; */
+    padding: 1rem;
     width: 60vw;
     height: 10vh;
 }
+.notes {
+    /* display: none; */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+
+
 
 @media (min-width: 768px) {
 
