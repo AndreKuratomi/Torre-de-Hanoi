@@ -50,12 +50,19 @@ article {
 .towers {
     background-color: #555;
     border: 1px solid #000;
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center;
     width: 5%;
     height: 90%;
 }
 .towers:hover {
     cursor: pointer;
 }
+#one {
+    /* position: relative; */
+}
+
 .discs {
     background-color: #555;
     border: 1px solid #000;
@@ -70,19 +77,27 @@ article {
 }
 #disc4 {
     background-color: #F0F;
-    width: 90%;
+    /* position: absolute;
+    top: 20rem; */
+    width: 100px;
 }
 #disc3 {
     background-color: #FF0;
-    width: 70%;
+    /* position: absolute;
+    top: 18.7rem; */
+    width: 70px;
 }
 #disc2 {
     background-color: #00F;
-    width: 50%;
+    /* position: absolute;
+    top: 17.4rem; */
+    width: 50px;
 }
 #disc1 {
     background-color: #0F0;
-    width: 30%;
+    /* position: absolute;
+    top: 16.1rem; */
+    width: 30px;
 }
 
 
@@ -93,7 +108,7 @@ article {
     height: 10vh;
 }
 .notes {
-    /* display: none; */
+    display: none;
     text-align: center;
     text-transform: uppercase;
     font-weight: bolder;
