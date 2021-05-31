@@ -1,0 +1,63 @@
+html, body, div, article, h1 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    min-width: 736px;
+    min-height: 414px;
+}
+
+body#game {
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+#suspenso {
+    background-color: #F00;
+    margin: 0;
+    width: 60vw;
+    height: 10vh;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0F0;
+    width: 60vw;
+    height: 60vh;
+}
+
+#torre1,
+#torre2,
+#torre3 {
+    border: 1px solid #000;
+    width: 33%;
+    height: 100%;
+}
+
+#notas {
+    background-color: #00F;
+    width: 60vw;
+    height: 10vh;
+}
+
+@media (min-width: 768px) {
+
+    html {
+        min-width: initial;
+        min-height: auto;
+    }
+
+
+}
