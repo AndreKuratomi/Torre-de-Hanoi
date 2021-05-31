@@ -36,7 +36,7 @@ div02.classList = "discs";
 div02.id = "disc2";
 disc2.appendChild(div02);
 
-const disc1 = window.document.getElementById('one');
+const disc1 = window.document.getElementById('torre1');
 const div01 = window.document.createElement('div');
 div01.classList = "discs";
 div01.id = "disc1";
