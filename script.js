@@ -52,11 +52,11 @@ div01.appendChild(disc1);
 //Criação section#notas:
 const notas = window.document.getElementById('notas');
 
-const divError1 = window.document.createElement('div');
-divError1.innerText = 'Só um disco de cada vez, ok? Arranje um lugar para o que já pegou antes.';
-divError1.id = 'errorNoMoreThanOne';
-divError1.classList = 'notes';
-notas.appendChild(divError1);
+// const divError1 = window.document.createElement('div');
+// divError1.innerText = 'Só um disco de cada vez, ok? Arranje um lugar para o que já pegou antes.';
+// divError1.id = 'errorNoMoreThanOne';
+// divError1.classList = 'notes';
+// notas.appendChild(divError1);
 
 const divError2 = window.document.createElement('div');
 divError2.innerText = 'Um disco maior não pode ficar em cima de um menor!';
@@ -82,105 +82,66 @@ notas.appendChild(divSuccess);
 
 //COMPORTAMENTOS:
 
-//Comportamento section#suspenso:
-if (armazem.childElementCount > 1) {
-    divError1.style.display = "block";
-};
-
 //Comportamento torres:
 stacke1.addEventListener('click', function(torre1) {
-    // let currentEventTarget = torre1.currentTarget;
-    // if (stacke1.appendChild(disc1)) {
-    //     currentEventTarget.childElementCount++
-    // }
+    let currentEventTarget = torre1.currentTarget;
+    if (armazem.childElementCount === 0) {
+        armazem.appendChild(currentEventTarget.lastElementChild);
+    } else {
+        currentEventTarget.appendChild(armazem.lastElementChild);
+    }
 
-    // .lastElementChild //if (.lastElementCount > ) {divError.style.display = "block"}
-    // .appendChild
+    if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
+        divError2.style.dispĺay = "block";
+    } else {
+        divError2.style.dispĺay = "none";        
+    }
+//identificar o último filho e adicionar a uma variável
+
     // .clientWidth
 });
 stacke2.addEventListener('click', function(torre2) {
-    // let currentEventTarget = torre2.currentTarget;
-    // if (stacke2.appendChild(disc1)) {
-    //     torre2.childElementCount++
-    // }
-    // if (currentEventTarget.childElementCount === 4) {
-    //     divError3.style.display = "block"
-    // }
+    let currentEventTarget = torre2.currentTarget;
+    if (armazem.childElementCount === 0) {
+        armazem.appendChild(currentEventTarget.lastElementChild);
+    } else {
+        currentEventTarget.appendChild(armazem.lastElementChild);
+    }
 
-    // .lastElementChild
+    if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
+        divError2.style.dispĺay = "block";
+    } else {
+        divError2.style.dispĺay = "none";        
+    }
+
+    if (currentEventTarget.childElementCount === 4) {
+        divError3.style.display = "block"
+    } else {
+        divSuccess.style.display = "none";
+    }
 
     // .clientWidth
 });
 stacke3.addEventListener('click', function(torre3) {
-    // let currentEventTarget = torre3.currentTarget;
-    // if (stacke3.appendChild(disc1)) {
-    //     currentEventTarget.childElementCount++
-    // }
-    // if (currentEventTarget.childElementCount === 4) {
-    //     divSuccess.style.display = "block"
-    // };
+    let currentEventTarget = torre3.currentTarget;
+    if (armazem.childElementCount === 0) {
+        armazem.appendChild(currentEventTarget.lastElementChild);
+    } else {
+        currentEventTarget.appendChild(armazem.lastElementChild);
+    }
 
-    // .lastElementChild
+    if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
+        divError2.style.dispĺay = "block";
+    } else {
+        divError2.style.dispĺay = "none";        
+    }
 
-    // .clientWidth
+    if (currentEventTarget.childElementCount === 4) {
+        divSuccess.style.display = "block";
+    } else {
+        divSuccess.style.display = "none";
+    }
 });
-
-//Comportamento discos:
-disc1.addEventListener('click', function(disco1) {
-    // armazem.appendChild(disc1);
-    // armazem.childElementCount++;
-
-    // let currentEventTarget = torre1.currentTarget;
-    // if (div1) {
-    // } else {
-    //     torre1.childElementCount--
-    // }
-    // .lastElementChild //if (.lastElementChild.clientWidth > ) {divError.style.display = "block"}
-
-    // .clientWidth
-});
-disc2.addEventListener('click', function(disco2) {
-    // armazem.appendChild(disc2);
-    // armazem.childElementCount++;
-
-    // let currentEventTarget = torre2.currentTarget;
-    // .childElementCount //if (childElementCount === 4) {div(...).style.display = "block"(ok, a torre está completa mas não é aqui que ela deve ficar)}
-    // .lastElementChild
-    // .appendChild
-    // .clientWidth
-});
-disc3.addEventListener('click', function(disco3) {
-    // armazem.appendChild(disc3);
-    // armazem.childElementCount++;
-
-    // let currentEventTarget = torre3.currentTarget;
-    // .childElementCount //if (childElementCount === 4) {divSuccess.style.display = "block"}
-    // .lastElementChild
-    // .appendChild
-    // .clientWidth
-});
-disc4.addEventListener('click', function(disco4) {
-    // armazem.appendChild(disc4);
-    // armazem.childElementCount++;
-
-    // let currentEventTarget = torre3.currentTarget;
-    // .childElementCount //if (childElementCount === 4) {divSuccess.style.display = "block"}
-    // .lastElementChild
-    // .appendChild
-    // .clientWidth
-});
-
-
-
-
-// Adicione um handler de clique em cada uma das três torres. Use event.currentTarget dentro do handler de evento para determinar 
-// qual torre foi clicada.
-// Use a propriedade DOM  para saber quantos discos estão em uma torre.
-// Use a propriedade DOM  para saber qual é o disco no topo da torre.
-// Use o método DOM appendChild() para adicionar um disco a uma torre (você já usou este método várias vezes em tarefas anteriores). 
-// Observe que quando você usa  em um elemento que já tem um pai, ele é automaticamente removido do pai anterior e 
-// adicionado no novo.
-// Use a propriedade  para pegar o tamanho dos discos.
 
 
 

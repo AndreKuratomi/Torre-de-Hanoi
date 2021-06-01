@@ -33,6 +33,7 @@ h1 {
     align-items: center;
 }
 
+
 article {
     display: flex;
     justify-content: space-between;
@@ -62,9 +63,7 @@ article {
 .towers:hover {
     cursor: pointer;
 }
-/* #one {
-    position: relative;
-} */
+
 
 .discs {
     border: 1px solid #000;
@@ -72,33 +71,25 @@ article {
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
-    height: 10%;
+    height: 30px;
 }
 .discs:hover {
     cursor: pointer;
 }
 #disc4 {
     background-color: #F0F;
-    /* position: absolute;
-    top: 20rem; */
     width: 130px;
 }
 #disc3 {
     background-color: #FF0;
-    /* position: absolute;
-    top: 18.7rem; */
     width: 100px;
 }
 #disc2 {
     background-color: #00F;
-    /* position: absolute;
-    top: 17.4rem; */
     width: 70px;
 }
 #disc1 {
     background-color: #0F0;
-    /* position: absolute;
-    top: 16.1rem; */
     width: 40px;
 }
 
