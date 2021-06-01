@@ -1,5 +1,6 @@
-html, body, article, section, div, h1 {
+html, body, article, section, div, h1, h3, ul, li {
     box-sizing: border-box;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -16,7 +17,22 @@ body#game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem 5rem;
+    margin: 0.5rem 5rem;
+}
+
+header {
+    margin: 0;
+    width: 100vw;
+    height: 15vh;
+    text-align: center;
+}
+
+h3 {
+   margin-block-end: 8px;
+}
+
+ul {
+    margin-block-start: 0;
 }
 
 h1 {
@@ -24,10 +40,9 @@ h1 {
 }
 
 #suspenso {
-    /* background-color: #F00; */
     margin: 0;
     width: 60vw;
-    height: 10vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +53,7 @@ article {
     justify-content: space-between;
     background-color: #FFF;
     width: 60vw;
-    height: 60vh;
+    height: 50vh;
 }
 
 #torre1,
@@ -62,9 +77,6 @@ article {
 .towers:hover {
     cursor: pointer;
 }
-/* #one {
-    position: relative;
-} */
 
 .discs {
     border: 1px solid #000;
@@ -72,33 +84,25 @@ article {
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
-    height: 10%;
+    height: 30px;
 }
 .discs:hover {
     cursor: pointer;
 }
 #disc4 {
     background-color: #F0F;
-    /* position: absolute;
-    top: 20rem; */
     width: 130px;
 }
 #disc3 {
     background-color: #FF0;
-    /* position: absolute;
-    top: 18.7rem; */
     width: 100px;
 }
 #disc2 {
     background-color: #00F;
-    /* position: absolute;
-    top: 17.4rem; */
     width: 70px;
 }
 #disc1 {
     background-color: #0F0;
-    /* position: absolute;
-    top: 16.1rem; */
     width: 40px;
 }
 
@@ -107,7 +111,7 @@ article {
     /* background-color: #00F; */
     padding: 1rem;
     width: 60vw;
-    height: 10vh;
+    height: 5vh;
 }
 .notes {
     font-weight: bolder;
@@ -128,12 +132,27 @@ article {
 }
 
 
-
-
-
 @media (min-width: 768px) {
 
+    h1 {
+        margin-bottom: 1rem;
+    }
 
+    header {
+        margin: 0;
+        width: 60vw;
+        height: 10vh;
+    }
 
+    h3 {
+       margin-block-end: 8px;
+    }
 
+    ul {
+        margin-block-start: 0;
+    }
+
+    #suspenso {
+        height: 10vh;
+    }
 }
