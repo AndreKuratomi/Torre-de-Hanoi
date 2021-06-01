@@ -11,6 +11,20 @@ html {
     min-height: 414px;
 }
 
+header {
+    margin: 0;
+    width: 60vw;
+    height: 15vh;
+}
+
+h3 {
+   margin-block-end: 8px;
+}
+
+ul {
+    margin-block-start: 0;
+}
+
 body#game {
     background-color: #DDD;
     display: flex;
@@ -28,6 +42,10 @@ h1 {
     margin: 0;
     width: 60vw;
     height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
 }
 
 article {
@@ -50,39 +68,53 @@ article {
 .towers {
     background-color: #555;
     border: 1px solid #000;
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center;
     width: 5%;
     height: 90%;
 }
 .towers:hover {
     cursor: pointer;
 }
+/* #one {
+    position: relative;
+} */
+
 .discs {
-    background-color: #555;
     border: 1px solid #000;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
-    height: 5%;
+    height: 10%;
 }
 .discs:hover {
     cursor: pointer;
 }
 #disc4 {
     background-color: #F0F;
-    width: 90%;
+    /* position: absolute;
+    top: 20rem; */
+    width: 130px;
 }
 #disc3 {
     background-color: #FF0;
-    width: 70%;
+    /* position: absolute;
+    top: 18.7rem; */
+    width: 100px;
 }
 #disc2 {
     background-color: #00F;
-    width: 50%;
+    /* position: absolute;
+    top: 17.4rem; */
+    width: 70px;
 }
 #disc1 {
     background-color: #0F0;
-    width: 30%;
+    /* position: absolute;
+    top: 16.1rem; */
+    width: 40px;
 }
 
 
@@ -93,21 +125,38 @@ article {
     height: 10vh;
 }
 .notes {
-    /* display: none; */
+    font-weight: bolder;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bolder;
 }
-
-
-
+#errorNoMoreThanOne {
+    display: none;
+}
+#errorLargeSmall {
+    display: none;
+}
+#errorCompleteWrongTower {
+    display: none;
+}
+#success {
+    display: none;
+}
 
 
 @media (min-width: 768px) {
 
-    html {
-        min-width: initial;
-        min-height: auto;
+    header {
+        margin: 0;
+        width: 60vw;
+        height: 10vh;
+    }
+
+    h3 {
+       margin-block-end: 8px;
+    }
+
+    ul {
+        margin-block-start: 0;
     }
 
 
