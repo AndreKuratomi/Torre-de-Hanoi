@@ -61,7 +61,7 @@ const notas = window.document.getElementById('notas');
 const divError2 = window.document.createElement('div');
 divError2.innerText = 'Um disco maior não pode ficar em cima de um menor!';
 divError2.id = 'errorLargeSmall';
-divError2.classList = 'notes';
+divError2.classList.add('notes','hidden')
 notas.appendChild(divError2);
 
 const divError3 = window.document.createElement('div');
@@ -88,59 +88,58 @@ stacke1.addEventListener('click', function(torre1) {
     if (armazem.childElementCount === 0) {
         armazem.appendChild(currentEventTarget.lastElementChild);
     } else {
-        currentEventTarget.appendChild(armazem.lastElementChild);
+        if (currentEventTarget.lastElementChild === null) {
+            currentEventTarget.appendChild(armazem.lastElementChild);
+        }
+        if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
+            divError2.classList.remove('hidden');
+        } else {
+            currentEventTarget.appendChild(armazem.lastElementChild);
+            divError2.classList.add('hidden');
+        }
     }
-
-    if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
-        divError2.style.dispĺay = "block";
-    } else {
-        divError2.style.dispĺay = "none";        
-    }
-//identificar o último filho e adicionar a uma variável
-
-    // .clientWidth
 });
 stacke2.addEventListener('click', function(torre2) {
     let currentEventTarget = torre2.currentTarget;
     if (armazem.childElementCount === 0) {
         armazem.appendChild(currentEventTarget.lastElementChild);
     } else {
-        currentEventTarget.appendChild(armazem.lastElementChild);
+        if (currentEventTarget.lastElementChild === null) {
+            currentEventTarget.appendChild(armazem.lastElementChild);
+        }
+        else if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
+            divError2.classList.remove('hidden');
+        } else {
+            currentEventTarget.appendChild(armazem.lastElementChild);
+            divError2.classList.add('hidden');
+        }
     }
-
-    if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
-        divError2.style.dispĺay = "block";
-    } else {
-        divError2.style.dispĺay = "none";        
-    }
-
     if (currentEventTarget.childElementCount === 4) {
-        divError3.style.display = "block"
+        divError3.style.display = "block";
     } else {
-        divSuccess.style.display = "none";
+        divError3.style.display = "none";
     }
-
-    // .clientWidth
 });
 stacke3.addEventListener('click', function(torre3) {
     let currentEventTarget = torre3.currentTarget;
     if (armazem.childElementCount === 0) {
         armazem.appendChild(currentEventTarget.lastElementChild);
     } else {
-        currentEventTarget.appendChild(armazem.lastElementChild);
+        if (currentEventTarget.lastElementChild === null) {
+            currentEventTarget.appendChild(armazem.lastElementChild);
+        }
+        else if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
+            divError2.classList.remove('hidden');
+        } else {
+            currentEventTarget.appendChild(armazem.lastElementChild);
+            divError2.classList.add('hidden');
+        }
     }
-
-    if (currentEventTarget.lastElementChild.clientWidth < armazem.lastElementChild.clientWidth) {
-        divError2.style.dispĺay = "block";
-    } else {
-        divError2.style.dispĺay = "none";        
-    }
-
     if (currentEventTarget.childElementCount === 4) {
-        divSuccess.style.display = "block";
+        divSuccess.style.display = "block"
     } else {
         divSuccess.style.display = "none";
-    }
+    };
 });
 
 

@@ -1,5 +1,6 @@
-html, body, article, section, div, h1 {
+html, body, article, section, div, h1, h3, ul, li {
     box-sizing: border-box;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -7,8 +8,6 @@ html, body, article, section, div, h1 {
 html {
     display: flex;
     flex-direction: column;
-    min-width: 736px;
-    min-height: 414px;
 }
 
 body#game {
@@ -16,27 +15,47 @@ body#game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem 5rem;
+    margin: 0.5rem 5rem;
+}
+
+h1 {
+}
+
+header {
+    margin: 0;
+    width: 90vw;
+    height: 15vh;
+    text-align: center;
+}
+
+h3 {
+    margin-block-end: 8px;
+}
+
+ul {
+    margin-block-start: 0;
+    margin-bottom: 0.5rem;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 0.5rem;
+    width: 60vw;
 }
 
 #suspenso {
-    /* background-color: #F00; */
     margin: 0;
     width: 60vw;
-    height: 10vh;
+    height: 9vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 article {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     background-color: #FFF;
     width: 60vw;
     height: 60vh;
@@ -57,13 +76,12 @@ article {
     display: flex; 
     flex-direction: column-reverse; 
     align-items: center;
-    width: 5%;
-    height: 90%;
+    width: 15%;
+    height: 95%;
 }
 .towers:hover {
     cursor: pointer;
 }
-
 
 .discs {
     border: 1px solid #000;
@@ -96,21 +114,21 @@ article {
 
 #notas {
     /* background-color: #00F; */
-    padding: 1rem;
-    width: 60vw;
-    height: 10vh;
+    margin-top: 0.5rem;
+    width: 100vw;
+    height: 5vh;
 }
 .notes {
     font-weight: bolder;
     text-align: center;
     text-transform: uppercase;
 }
-#errorNoMoreThanOne {
+.hidden {
     display: none;
 }
-#errorLargeSmall {
+/* #errorLargeSmall {
     display: none;
-}
+} */
 #errorCompleteWrongTower {
     display: none;
 }
@@ -119,12 +137,45 @@ article {
 }
 
 
-
-
-
 @media (min-width: 768px) {
 
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #FFF;
+        width: 60vw;
+        height: 50vh;
+    }
 
+    h1 {
+        margin-bottom: 1rem;
+    }
 
+    header {
+        margin: 0;
+        width: 60vw;
+        height: 10vh;
+    }
 
+    h3 {
+       margin-block-end: 8px;
+    }
+
+    ul {
+        margin-block-start: 0;
+    }
+
+    #suspenso {
+        height: 10vh;
+    }
+
+    .towers {
+        width: 5%;
+    }
+
+    #notas {
+        margin-top: 1rem;
+    }
 }
+
