@@ -8,8 +8,7 @@ html, body, article, section, div, h1, h3, ul, li {
 html {
     display: flex;
     flex-direction: column;
-    min-width: 736px;
-    min-height: 414px;
+    height: 100vh;
 }
 
 body#game {
@@ -17,7 +16,12 @@ body#game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.5rem 5rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 0.25rem;
+    width: 60vw;
 }
 
 header {
@@ -25,25 +29,20 @@ header {
     width: 90vw;
     height: 15vh;
     text-align: center;
-    font-size: 18px;
 }
 
 h3 {
-   margin-block-end: 8px;
+    margin-block-end: 8px;
 }
 
 ul {
     margin-block-start: 0;
-}
-
-h1 {
-    text-align: center;
-    font-size: 5em;
+    margin-bottom: 0.5rem;
 }
 
 #suspenso {
     margin: 0;
-    width: 110vw;
+    width: 60vw;
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -55,8 +54,8 @@ article {
     flex-direction: column;
     align-items: center;
     background-color: #FFF;
-    width: 110vw;
-    height: 95vh;
+    width: 60vw;
+    height: 55vh;
 }
 
 #torre1,
@@ -74,8 +73,8 @@ article {
     display: flex; 
     flex-direction: column-reverse; 
     align-items: center;
-    width: 10%;
-    height: 90%;
+    width: 15%;
+    height: 95%;
 }
 .towers:hover {
     cursor: pointer;
@@ -87,33 +86,33 @@ article {
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
-    height: 35px;
+    height: 30px;
 }
 .discs:hover {
     cursor: pointer;
 }
 #disc4 {
     background-color: #F0F;
-    width: 250px;
+    width: 130px;
 }
 #disc3 {
     background-color: #FF0;
-    width: 190px;
+    width: 100px;
 }
 #disc2 {
     background-color: #00F;
-    width: 140px;
+    width: 70px;
 }
 #disc1 {
     background-color: #0F0;
-    width: 80px;
+    width: 40px;
 }
 
 
 #notas {
     /* background-color: #00F; */
-    padding: 1rem;
-    width: 60vw;
+    margin-top: 1rem;
+    width: 100vw;
     height: 5vh;
 }
 .notes {
@@ -137,9 +136,8 @@ article {
 
 @media (min-width: 768px) {
 
-    #suspenso {
-        width: 60vw;
-        height: 15vh;
+    body#game {
+        margin: 1rem 0;
     }
 
     article {
@@ -177,19 +175,7 @@ article {
         width: 5%;
     }
 
-    #disc4 {
-        width: 130px;
-    }
-
-    #disc3 {
-        width: 100px;
-    }
-
-    #disc2 {
-        width: 70px;
-    }
-
-    #disc1 {
-        width: 40px;
+    #notas {
+        margin-top: 1rem;
     }
 }
