@@ -8,6 +8,7 @@ html, body, article, section, div, h1, h3, ul, li {
 html {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 body#game {
@@ -15,10 +16,12 @@ body#game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.5rem 5rem;
 }
 
 h1 {
+    text-align: center;
+    margin: 0.25rem;
+    width: 60vw;
 }
 
 header {
@@ -37,16 +40,10 @@ ul {
     margin-bottom: 0.5rem;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    width: 60vw;
-}
-
 #suspenso {
     margin: 0;
     width: 60vw;
-    height: 9vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,8 +54,8 @@ article {
     flex-direction: column;
     align-items: center;
     background-color: #FFF;
-    width: 110vw;
-    height: 95vh;
+    width: 60vw;
+    height: 55vh;
 }
 
 #torre1,
@@ -89,7 +86,7 @@ article {
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
-    height: 30px;
+    height: 25px;
 }
 .discs:hover {
     cursor: pointer;
@@ -114,7 +111,7 @@ article {
 
 #notas {
     /* background-color: #00F; */
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     width: 100vw;
     height: 5vh;
 }
@@ -138,6 +135,10 @@ article {
 
 
 @media (min-width: 768px) {
+
+    body#game {
+        margin: 1rem 0;
+    }
 
     article {
         display: flex;
@@ -178,4 +179,3 @@ article {
         margin-top: 1rem;
     }
 }
-
