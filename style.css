@@ -22,9 +22,10 @@ body#game {
 
 header {
     margin: 0;
-    width: 100vw;
+    width: 90vw;
     height: 15vh;
     text-align: center;
+    font-size: 18px;
 }
 
 h3 {
@@ -37,12 +38,13 @@ ul {
 
 h1 {
     text-align: center;
+    font-size: 5em;
 }
 
 #suspenso {
     margin: 0;
-    width: 60vw;
-    height: 15vh;
+    width: 110vw;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +55,8 @@ article {
     flex-direction: column;
     align-items: center;
     background-color: #FFF;
-    width: 60vw;
-    height: 50vh;
+    width: 110vw;
+    height: 95vh;
 }
 
 #torre1,
@@ -85,26 +87,26 @@ article {
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
-    height: 30px;
+    height: 35px;
 }
 .discs:hover {
     cursor: pointer;
 }
 #disc4 {
     background-color: #F0F;
-    width: 130px;
+    width: 250px;
 }
 #disc3 {
     background-color: #FF0;
-    width: 100px;
+    width: 190px;
 }
 #disc2 {
     background-color: #00F;
-    width: 70px;
+    width: 140px;
 }
 #disc1 {
     background-color: #0F0;
-    width: 40px;
+    width: 80px;
 }
 
 
@@ -134,6 +136,11 @@ article {
 
 
 @media (min-width: 768px) {
+
+    #suspenso {
+        width: 60vw;
+        height: 15vh;
+    }
 
     article {
         display: flex;
@@ -168,5 +175,21 @@ article {
 
     .towers {
         width: 5%;
+    }
+
+    #disc4 {
+        width: 130px;
+    }
+
+    #disc3 {
+        width: 100px;
+    }
+
+    #disc2 {
+        width: 70px;
+    }
+
+    #disc1 {
+        width: 40px;
     }
 }
