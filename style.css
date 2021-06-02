@@ -50,7 +50,8 @@ h1 {
 
 article {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     background-color: #FFF;
     width: 60vw;
     height: 50vh;
@@ -71,7 +72,7 @@ article {
     display: flex; 
     flex-direction: column-reverse; 
     align-items: center;
-    width: 5%;
+    width: 10%;
     height: 90%;
 }
 .towers:hover {
@@ -118,12 +119,12 @@ article {
     text-align: center;
     text-transform: uppercase;
 }
-#errorNoMoreThanOne {
+.hidden {
     display: none;
 }
-#errorLargeSmall {
+/* #errorLargeSmall {
     display: none;
-}
+} */
 #errorCompleteWrongTower {
     display: none;
 }
@@ -133,6 +134,15 @@ article {
 
 
 @media (min-width: 768px) {
+
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #FFF;
+        width: 60vw;
+        height: 50vh;
+    }
 
     h1 {
         margin-bottom: 1rem;
@@ -154,5 +164,9 @@ article {
 
     #suspenso {
         height: 10vh;
+    }
+
+    .towers {
+        width: 5%;
     }
 }
