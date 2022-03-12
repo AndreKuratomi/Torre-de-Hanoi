@@ -1,5 +1,4 @@
-# Torre-de-Hanoi
-## ANAGRAMAS2
+# TORRE-DE-HANOI
 
 - [Descrição](#descrição)
 - [Instalação](#instalação)
