@@ -10,6 +10,8 @@
 # Descrição
 
 <p><b>Torre de Hanói</b> é uma aplicação que recria o famoso jogo Torre de Hanói. Esta aplicação utiliza HTML5, CSS3, DOM e a linguagem Javascript</p>
+
+<p>Jogue agora!: https://lnkd.in/d_2gKJKu</p>
 <br>
 
 # Instalação
